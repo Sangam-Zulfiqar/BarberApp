@@ -56,34 +56,45 @@ class ProfileScreen2Two extends StatelessWidget {
                 child: Row(
                   children: [
                     Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: Colors.grey,
+                      ),
                       child: Image(
                         image: AssetImage('assets/icons/img1.jpg'),
                       ),
                       height: 110,
                       width: 110,
-                      color: Colors.grey,
                     ),
                     SizedBox(
                       width: 15,
                     ),
                     Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: Colors.grey,
+                      ),
                       child: Image(
-                        image: AssetImage('assets/icons/img1.jpg'),
+                        image: AssetImage(
+                          'assets/icons/img1.jpg',
+                        ),
                       ),
                       height: 110,
                       width: 110,
-                      color: Colors.grey,
                     ),
                     SizedBox(
                       width: 15,
                     ),
                     Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: Colors.grey,
+                      ),
                       child: Image(
                         image: AssetImage('assets/icons/img1.jpg'),
                       ),
                       height: 110,
                       width: 110,
-                      color: Colors.grey,
                     ),
                   ],
                 ),
@@ -98,22 +109,69 @@ class ProfileScreen2Two extends StatelessWidget {
               ),
               Text(
                   "Hello I Am Jewel Rana As A Very Good UI/UX Designer Hello I Am Jewel Rana"),
-              SizedBox(
-                height: 30,
-              ),
-              Align(
-                alignment: Alignment.bottomRight,
-                child: NewButton(
-                  ontap: () {
-                    Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => BottomNavigation(),
-                      ),
-                    );
-                  },
+
+              Padding(
+                padding: const EdgeInsets.only(top: 250),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    ButtonTheme(
+                      minWidth: 100,
+                      height: 40,
+                      child: RaisedButton(
+                          elevation: 1,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Text(
+                            "Edit",
+                            style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white),
+                          ),
+                          color: Colors.purple,
+                          onPressed: () {}),
+                    ),
+                    ButtonTheme(
+                      minWidth: 100,
+                      height: 40,
+                      child: RaisedButton(
+                          elevation: 1,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Text(
+                            "Save",
+                            style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white),
+                          ),
+                          color: Colors.purple,
+                          onPressed: () {
+                            Navigator.pushReplacement(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => BottomNavigation()));
+                          }),
+                    ),
+                  ],
                 ),
               ),
+              // Align(
+              //   alignment: Alignment.bottomRight,
+              //   child: NewButton(
+              //     ontap: () {
+              //       Navigator.pushReplacement(
+              //         context,
+              //         MaterialPageRoute(
+              //           builder: (context) => BottomNavigation(),
+              //         ),
+              //       );
+              //     },
+              //   ),
+              // ),
             ],
           ),
         ),

@@ -1,4 +1,4 @@
-import 'package:barber_app/Screens/ProfileScreens/Screen2/ProfileScreenProvider.dart';
+import 'package:barber_app/Screens/UserProfile/ProfileScreenProvider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../../Widgets/ProfileTextFeild.dart';
@@ -46,6 +46,9 @@ class PersonProfileScreen2 extends StatelessWidget {
                       // maxLines: 2,
                     ),
                   ),
+                  SizedBox(
+                    height: 50,
+                  ),
                   ProfileTextFeild(model: model),
                   SizedBox(
                     height: 10,
@@ -60,15 +63,16 @@ class PersonProfileScreen2 extends StatelessWidget {
                     model: model,
                   ),
                   SizedBox(
-                    height: 10,
+                    height: 100,
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 200),
+                    padding: const EdgeInsets.only(left: 250),
                     child: Container(
                       width: 100,
+                      height: 40,
                       alignment: Alignment.bottomRight,
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
+                        borderRadius: BorderRadius.circular(10),
                         color: Colors.purple,
                       ),
                       child: FlatButton(

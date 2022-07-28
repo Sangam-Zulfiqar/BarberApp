@@ -42,11 +42,11 @@ class Log_In extends StatelessWidget {
                 height: 10,
               ),
               Container(
-                height: 40,
+                height: 50,
                 width: 300,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(
-                    10,
+                    30,
                   ),
                   border: Border.all(color: Colors.white, width: 2),
                 ),
@@ -59,10 +59,9 @@ class Log_In extends StatelessWidget {
                         ),
                       );
                     },
-                    title: 'SignIp',
+                    title: 'SignUp',
                     colorP: Colors.purple),
               )
-              //  SignUpButton(Color: Colors.white, title: 'SignUp'),
             ],
           ),
         ],

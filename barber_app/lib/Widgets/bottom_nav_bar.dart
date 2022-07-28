@@ -1,5 +1,6 @@
-import 'package:barber_app/Screens/ChatInboxScreen/ChatInbox.dart';
 import 'package:barber_app/Screens/ChooseProfession/Choose_Profession.dart';
+import 'package:barber_app/Screens/UserProfile/PersonProfileScreen2.dart';
+import 'package:barber_app/Screens/chatscreens/ChatProfile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -15,7 +16,8 @@ class _BottomNavigationState extends State<BottomNavigation> {
 
   final pages = [
     ProfileScreen2(),
-    ChatUi(),
+    ChatProfile(),
+    PersonProfileScreen2(),
   ];
 
   Future<bool> showExitPopup() async {

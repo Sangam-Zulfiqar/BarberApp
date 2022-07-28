@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../ChatInboxScreen/ChatUIBox.dart';
+
 class ChatProfile extends StatelessWidget {
   const ChatProfile({Key? key}) : super(key: key);
 
@@ -17,13 +19,25 @@ class ChatProfile extends StatelessWidget {
                 children: [
                   Padding(
                     padding: EdgeInsets.only(top: 6.0, left: 8, bottom: 6),
-                    child: Container(
-                      height: 80,
-                      width: 80,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(100),
-                          color: Colors.grey),
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => ChatScreen()));
+                      },
+                      child: CircleAvatar(
+                        backgroundImage: AssetImage('assets/icons/lion.jpg'),
+                        maxRadius: 20,
+                      ),
                     ),
+                    //Container(
+                    //   height: 80,
+                    //   width: 80,
+                    //   decoration: BoxDecoration(
+                    //       borderRadius: BorderRadius.circular(100),
+                    //       color: Colors.grey),
+                    // ),
                   ),
                   SizedBox(
                     width: 30,

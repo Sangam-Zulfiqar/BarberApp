@@ -15,11 +15,13 @@ class Choose_Profession extends StatelessWidget {
       appBar: AppBar(
         title: Center(
           child: Padding(
-            padding: const EdgeInsets.only(top: 15),
+            padding: const EdgeInsets.only(top: 40),
             child: Text(
               "Choose Profession",
-              style:
-                  TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 26),
             ),
           ),
         ),
@@ -29,38 +31,41 @@ class Choose_Profession extends StatelessWidget {
       backgroundColor: Colors.white,
       body: Column(
         children: [
-          GridView.count(
-            shrinkWrap: true,
-            primary: false,
-            padding: EdgeInsets.all(10),
-            childAspectRatio: 2.5 / 2,
-            crossAxisCount: 2,
-            children: [
-              ContainerClass(
-                imgPath: 'assets/icons/HairStyle.svg',
-                title: "Barber",
-              ),
-              ContainerClass(
-                imgPath: 'assets/icons/Brows.svg',
-                title: "Brows",
-              ),
-              ContainerClass(
-                imgPath: 'assets/icons/HairStyle.svg',
-                title: "Hair Sstylist",
-              ),
-              ContainerClass(
-                imgPath: 'assets/icons/Pedicure.svg',
-                title: "Pedicurest",
-              ),
-              ContainerClass(
-                imgPath: 'assets/icons/HairBeautyProducts.svg',
-                title: "Hair Beauty Products",
-              ),
-              ContainerClass(
-                imgPath: 'assets/icons/HairBeautyProducts.svg',
-                title: "MakeUp Products",
-              ),
-            ],
+          Padding(
+            padding: const EdgeInsets.only(top: 50),
+            child: GridView.count(
+              shrinkWrap: true,
+              primary: false,
+              padding: EdgeInsets.all(10),
+              childAspectRatio: 2.5 / 2,
+              crossAxisCount: 2,
+              children: [
+                ContainerClass(
+                  imgPath: 'assets/icons/HairStyle.svg',
+                  title: "Barber",
+                ),
+                ContainerClass(
+                  imgPath: 'assets/icons/Brows.svg',
+                  title: "Brows",
+                ),
+                ContainerClass(
+                  imgPath: 'assets/icons/HairStyle.svg',
+                  title: "Hair Sstylist",
+                ),
+                ContainerClass(
+                  imgPath: 'assets/icons/Pedicure.svg',
+                  title: "Pedicurest",
+                ),
+                ContainerClass(
+                  imgPath: 'assets/icons/HairBeautyProducts.svg',
+                  title: "Hair Beauty Products",
+                ),
+                ContainerClass(
+                  imgPath: 'assets/icons/HairBeautyProducts.svg',
+                  title: "MakeUp Products",
+                ),
+              ],
+            ),
           ),
           SizedBox(
             height: 30,
@@ -68,7 +73,7 @@ class Choose_Profession extends StatelessWidget {
           Align(
             alignment: Alignment.bottomRight,
             child: Padding(
-              padding: const EdgeInsets.only(right: 20, top: 100),
+              padding: const EdgeInsets.only(right: 20, top: 60),
               child: NewButton(
                 ontap: () {
                   Navigator.pushReplacement(
